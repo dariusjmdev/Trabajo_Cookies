@@ -1,0 +1,57 @@
+/*
+  CookieLab - estilos.css
+  Los colores se definen como variables para poder cambiar de tema
+  añadiendo o quitando la clase "claro" en el <body> desde app.js.
+*/
+
+/* Tema oscuro (por defecto) */
+:root {
+  --fondo: #1e1e1e;
+  --texto: #f0f0f0;
+  --borde: #666666;
+}
+
+/* Tema claro: se activa cuando el body tiene la clase "claro" (Fase 3) */
+body.claro {
+  --fondo: #ffffff;
+  --texto: #1e1e1e;
+  --borde: #999999;
+}
+
+body {
+  margin: 0;
+  padding: 2rem;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Bloques que agrupan las preferencias y los botones */
+.grupo {
+  margin: 1.5rem 0;
+}
+
+label {
+  display: block;
+  margin-top: 0.75rem;
+}
+
+select,
+button {
+  margin-top: 0.25rem;
+  padding: 0.4rem 0.8rem;
+  font: inherit;
+  color: var(--texto);
+  background: var(--fondo);
+  border: 1px solid var(--borde);
+}
+
+button {
+  margin-right: 0.5rem;
+  cursor: pointer;
+}

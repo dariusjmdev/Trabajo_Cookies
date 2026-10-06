@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CookieLab</title>
+  <!-- Hoja de estilos: define el tema oscuro (por defecto) y el tema claro -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <h1>CookieLab</h1>
+
+    <!-- Fases 1 y 2: saludo al usuario (se rellena desde app.js) -->
+    <p id="saludo"></p>
+
+    <!-- Fase 4: contador de visitas (se rellena desde app.js) -->
+    <p id="visitas"></p>
+
+    <!-- Final: fecha de la última visita (se rellena desde app.js) -->
+    <p id="ultima"></p>
+
+    <!-- Fase 3: preferencias del usuario, guardadas en las cookies "tema" e "idioma" -->
+    <div class="grupo">
+      <label for="tema">Tema</label>
+      <select id="tema">
+        <option value="oscuro">Oscuro</option>
+        <option value="claro">Claro</option>
+      </select>
+
+      <label for="idioma">Idioma del saludo</label>
+      <select id="idioma">
+        <option value="es">Español</option>
+        <option value="en">Inglés</option>
+      </select>
+    </div>
+
+    <!-- Fase 5: panel de control para gestionar los datos guardados -->
+    <div class="grupo">
+      <button type="button" id="btnCambiar">Cambiar mi nombre</button>
+      <button type="button" id="btnOlvidar">Olvidarme</button>
+    </div>
+  </main>
+
+  <!-- "defer" hace que el script se ejecute cuando el HTML ya está cargado -->
+  <script src="app.js" defer></script>
+</body>
+</html>
